@@ -1,0 +1,4 @@
+interface:
+  display_name: "Traction & Leads Strategy"
+  short_description: "Evidence-based acquisition and funnel decisions"
+  default_prompt: "Use $traction-leads-strategy to diagnose this growth decision and propose a bounded test."
