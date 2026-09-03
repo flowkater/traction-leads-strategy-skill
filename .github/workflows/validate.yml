@@ -1,0 +1,28 @@
+name: Validate skill
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check shell syntax
+        run: |
+          bash -n install.sh
+          bash -n scripts/test-install.sh
+      - name: Check required skill metadata
+        run: |
+          test "$(sed -n '1p' SKILL.md)" = '---'
+          grep -q '^name: traction-leads-strategy$' SKILL.md
+          grep -q '^description: .' SKILL.md
+      - name: Test isolated installation and safe update
+        run: ./scripts/test-install.sh

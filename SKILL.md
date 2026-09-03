@@ -1,6 +1,7 @@
 ---
 name: traction-leads-strategy
 description: Diagnose acquisition, offer, funnel, and channel decisions; then design evidence-based growth strategies and bounded experiments. Use for finding a binding constraint, choosing a traction channel, planning first-customer acquisition, auditing a campaign or landing path, or interpreting results. Do not use for tactical copy, SEO, ad operations, prospecting, or analytics implementation once the strategic decision is already fixed.
+license: MIT
 ---
 
 # Traction & Leads Strategy
